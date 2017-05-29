@@ -12,6 +12,10 @@
 		5A61EDC81ED0085D00FF6CBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A61EDC61ED0085D00FF6CBF /* Main.storyboard */; };
 		5A61EDCA1ED0085D00FF6CBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A61EDC91ED0085D00FF6CBF /* Assets.xcassets */; };
 		5A61EDCD1ED0085D00FF6CBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A61EDCB1ED0085D00FF6CBF /* LaunchScreen.storyboard */; };
+		5A61EDF91ED41AF600FF6CBF /* forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5A61EDF81ED41AF600FF6CBF /* forest.jpg */; };
+		5A61EDFB1ED41B4800FF6CBF /* lightbulb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5A61EDFA1ED41B4800FF6CBF /* lightbulb.jpg */; };
+		5A61EDFD1ED41B8900FF6CBF /* mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5A61EDFC1ED41B8900FF6CBF /* mountain.jpg */; };
+		5AB134B41ED70BD800638FB3 /* EnlargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB134B31ED70BD800638FB3 /* EnlargeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		5A61EDC91ED0085D00FF6CBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A61EDCC1ED0085D00FF6CBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A61EDCE1ED0085D00FF6CBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A61EDF81ED41AF600FF6CBF /* forest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = forest.jpg; sourceTree = "<group>"; };
+		5A61EDFA1ED41B4800FF6CBF /* lightbulb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lightbulb.jpg; sourceTree = "<group>"; };
+		5A61EDFC1ED41B8900FF6CBF /* mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain.jpg; sourceTree = "<group>"; };
+		5AB134B31ED70BD800638FB3 /* EnlargeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnlargeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +62,13 @@
 		5A61EDC11ED0085D00FF6CBF /* SlideshowApp */ = {
 			isa = PBXGroup;
 			children = (
+				5A61EDF81ED41AF600FF6CBF /* forest.jpg */,
+				5A61EDFC1ED41B8900FF6CBF /* mountain.jpg */,
+				5A61EDFA1ED41B4800FF6CBF /* lightbulb.jpg */,
 				5A61EDC21ED0085D00FF6CBF /* AppDelegate.swift */,
 				5A61EDC41ED0085D00FF6CBF /* ViewController.swift */,
 				5A61EDC61ED0085D00FF6CBF /* Main.storyboard */,
+				5AB134B31ED70BD800638FB3 /* EnlargeViewController.swift */,
 				5A61EDC91ED0085D00FF6CBF /* Assets.xcassets */,
 				5A61EDCB1ED0085D00FF6CBF /* LaunchScreen.storyboard */,
 				5A61EDCE1ED0085D00FF6CBF /* Info.plist */,
@@ -123,9 +135,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A61EDF91ED41AF600FF6CBF /* forest.jpg in Resources */,
 				5A61EDCD1ED0085D00FF6CBF /* LaunchScreen.storyboard in Resources */,
+				5A61EDFB1ED41B4800FF6CBF /* lightbulb.jpg in Resources */,
 				5A61EDCA1ED0085D00FF6CBF /* Assets.xcassets in Resources */,
 				5A61EDC81ED0085D00FF6CBF /* Main.storyboard in Resources */,
+				5A61EDFD1ED41B8900FF6CBF /* mountain.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AB134B41ED70BD800638FB3 /* EnlargeViewController.swift in Sources */,
 				5A61EDC51ED0085D00FF6CBF /* ViewController.swift in Sources */,
 				5A61EDC31ED0085D00FF6CBF /* AppDelegate.swift in Sources */,
 			);
@@ -299,6 +315,7 @@
 				5A61EDD31ED0085D00FF6CBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

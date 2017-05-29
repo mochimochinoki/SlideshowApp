@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,111 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UuS-VG-20L">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gtV-KU-xv9" appends="YES" id="5pt-wS-1BT"/>
+                                </connections>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BG1-Ia-5y0">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="進む" id="Wc7-XH-r0m">
+                                        <connections>
+                                            <action selector="nextPhoto:" destination="BYZ-38-t0r" id="jOA-fU-hOn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="KCb-fq-SXL"/>
+                                    <barButtonItem title="戻る" id="Yjp-8s-Guk">
+                                        <connections>
+                                            <action selector="backButton:" destination="BYZ-38-t0r" id="0uq-eh-hFP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MdL-vA-L8A"/>
+                                    <barButtonItem title="再生/停止" id="xD8-PI-3te">
+                                        <connections>
+                                            <action selector="startstopButton:" destination="BYZ-38-t0r" id="p32-Ln-h44"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UuS-VG-20L" firstAttribute="trailing" secondItem="BG1-Ia-5y0" secondAttribute="trailing" id="AOg-Xn-5n2"/>
+                            <constraint firstItem="BG1-Ia-5y0" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="HFK-jO-hBa"/>
+                            <constraint firstItem="UuS-VG-20L" firstAttribute="leading" secondItem="BG1-Ia-5y0" secondAttribute="leading" id="IzA-Il-eNh"/>
+                            <constraint firstAttribute="trailing" secondItem="UuS-VG-20L" secondAttribute="trailing" id="O2V-Hn-T35"/>
+                            <constraint firstItem="UuS-VG-20L" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="PNW-pj-aYG"/>
+                            <constraint firstItem="UuS-VG-20L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cJR-11-jwA"/>
+                            <constraint firstItem="UuS-VG-20L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pCU-Fs-aow"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="Yjp-8s-Guk" id="X9c-RN-A2q"/>
+                        <outlet property="goButton" destination="Wc7-XH-r0m" id="vd3-JJ-4Pp"/>
+                        <outlet property="image" destination="UuS-VG-20L" id="UVi-pN-Y3a"/>
+                        <outlet property="startstop" destination="xD8-PI-3te" id="sNK-yn-t7h"/>
+                        <segue destination="s9f-dI-9by" kind="show" identifier="toEnlargeViewController" id="IIX-Go-lF5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gtV-KU-xv9">
+                    <connections>
+                        <action selector="tapimage:" destination="BYZ-38-t0r" id="PFw-Le-O2m"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-730" y="189"/>
+        </scene>
+        <!--Enlarge View Controller-->
+        <scene sceneID="60i-tv-x3d">
+            <objects>
+                <viewController id="s9f-dI-9by" customClass="EnlargeViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sQn-ao-hHm"/>
+                        <viewControllerLayoutGuide type="bottom" id="0sj-6p-rKz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qmE-wx-mYB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t2O-vC-Zrz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9J-dR-QZz">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="戻る" id="gex-d6-WBV">
+                                        <connections>
+                                            <segue destination="zzf-Ew-JH7" kind="unwind" unwindAction="returnToTopWithSegue:" id="80l-XH-l2G"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t2O-vC-Zrz" firstAttribute="bottom" secondItem="0sj-6p-rKz" secondAttribute="top" id="2to-qA-5ge"/>
+                            <constraint firstAttribute="trailing" secondItem="t2O-vC-Zrz" secondAttribute="trailing" id="68G-gk-pq6"/>
+                            <constraint firstItem="t2O-vC-Zrz" firstAttribute="trailing" secondItem="e9J-dR-QZz" secondAttribute="trailing" id="RSa-lD-dhy"/>
+                            <constraint firstItem="t2O-vC-Zrz" firstAttribute="top" secondItem="qmE-wx-mYB" secondAttribute="top" id="Vli-1o-18g"/>
+                            <constraint firstItem="e9J-dR-QZz" firstAttribute="bottom" secondItem="0sj-6p-rKz" secondAttribute="top" id="cvz-67-0D5"/>
+                            <constraint firstItem="t2O-vC-Zrz" firstAttribute="leading" secondItem="qmE-wx-mYB" secondAttribute="leading" id="d75-B4-sRO"/>
+                            <constraint firstItem="t2O-vC-Zrz" firstAttribute="leading" secondItem="e9J-dR-QZz" secondAttribute="leading" id="dsR-0U-93T"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="enlargeView" destination="t2O-vC-Zrz" id="4o0-ev-Bm3"/>
+                        <outlet property="view" destination="t2O-vC-Zrz" id="wz6-kq-Uta"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bqV-eT-Pbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zzf-Ew-JH7" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="188"/>
         </scene>
     </scenes>
 </document>
