@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     let image2 = UIImage(named: "mountain.jpg")!
     let image3 = UIImage(named: "lightbulb.jpg")!
     var timer: Timer!
+    var backbutton: UIBarButtonItem!
+
     func setButtonEnabled(startstop:Bool){
         self.goButton.isEnabled = startstop
         self.backButton.isEnabled = startstop
@@ -28,6 +30,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         image.image = image1
         image.isUserInteractionEnabled = true
+        self.startstop.title = "再生"
     }
     
     override func didReceiveMemoryWarning() {
@@ -77,13 +80,17 @@ class ViewController: UIViewController {
             setButtonEnabled(startstop: true)
             self.timer = nil
         }
+        if self.startstop.title == "再生" {
+            self.startstop.title = "停止"
+        } else if self.startstop.title == "停止"{
+            self.startstop.title = "再生"
+        }
         
     }
     @IBAction func tapimage(_ sender: Any) {
         performSegue(withIdentifier: "toEnlargeViewController" , sender: nil)
         if self.timer != nil{
             self.timer.invalidate()
-            self.timer = nil
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
@@ -99,7 +106,7 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func returnToTop(segue: UIStoryboardSegue){
-        if self.timer == nil{
+        if self.timer != nil{
             self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(updatephoto), userInfo: nil, repeats: true)
         }
     }

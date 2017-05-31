@@ -37,15 +37,15 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="KCb-fq-SXL"/>
-                                    <barButtonItem title="戻る" id="Yjp-8s-Guk">
-                                        <connections>
-                                            <action selector="backButton:" destination="BYZ-38-t0r" id="0uq-eh-hFP"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MdL-vA-L8A"/>
                                     <barButtonItem title="再生/停止" id="xD8-PI-3te">
                                         <connections>
                                             <action selector="startstopButton:" destination="BYZ-38-t0r" id="p32-Ln-h44"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MdL-vA-L8A"/>
+                                    <barButtonItem title="戻る" id="Yjp-8s-Guk">
+                                        <connections>
+                                            <action selector="backButton:" destination="BYZ-38-t0r" id="0uq-eh-hFP"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -53,13 +53,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="UuS-VG-20L" firstAttribute="trailing" secondItem="BG1-Ia-5y0" secondAttribute="trailing" id="AOg-Xn-5n2"/>
-                            <constraint firstItem="BG1-Ia-5y0" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="HFK-jO-hBa"/>
-                            <constraint firstItem="UuS-VG-20L" firstAttribute="leading" secondItem="BG1-Ia-5y0" secondAttribute="leading" id="IzA-Il-eNh"/>
-                            <constraint firstAttribute="trailing" secondItem="UuS-VG-20L" secondAttribute="trailing" id="O2V-Hn-T35"/>
-                            <constraint firstItem="UuS-VG-20L" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="PNW-pj-aYG"/>
-                            <constraint firstItem="UuS-VG-20L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cJR-11-jwA"/>
-                            <constraint firstItem="UuS-VG-20L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pCU-Fs-aow"/>
+                            <constraint firstItem="UuS-VG-20L" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="1Jh-xi-SCN"/>
+                            <constraint firstItem="UuS-VG-20L" firstAttribute="trailing" secondItem="BG1-Ia-5y0" secondAttribute="trailing" id="YXm-5Z-mRf"/>
+                            <constraint firstItem="UuS-VG-20L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e2y-0o-WU1"/>
+                            <constraint firstAttribute="trailing" secondItem="UuS-VG-20L" secondAttribute="trailing" id="ska-VT-5DH"/>
+                            <constraint firstItem="UuS-VG-20L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wRm-pf-aNh"/>
+                            <constraint firstItem="BG1-Ia-5y0" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="xqm-04-f2H"/>
+                            <constraint firstItem="UuS-VG-20L" firstAttribute="leading" secondItem="BG1-Ia-5y0" secondAttribute="leading" id="y5e-pV-yN8"/>
                         </constraints>
                     </view>
                     <connections>
